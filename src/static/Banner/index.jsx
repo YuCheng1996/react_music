@@ -15,6 +15,7 @@ export default class index extends Component {
                                     <Image
                                         width={'100%'}
                                         src={item.imageUrl}
+                                        preview={false}
                                     />
                                 </div>
                             )

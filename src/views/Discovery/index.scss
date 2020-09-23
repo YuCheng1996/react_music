@@ -1,0 +1,14 @@
+.recommendBox {
+    .title {
+        color: #ccc;
+        display: block;
+        padding: 20px 0;
+    }
+
+    .recommend {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
