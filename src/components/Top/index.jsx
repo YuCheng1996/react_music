@@ -3,7 +3,7 @@ import { Input } from 'antd'
 import { SearchOutlined } from '@ant-design/icons'
 
 export default class Index extends Component {
-    
+
     render() {
         return (
             <div className="top-container">
