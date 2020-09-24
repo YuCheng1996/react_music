@@ -1,4 +1,4 @@
-.recommendBox {
+.recommendSongFrom {
     .title {
         color: #ccc;
         display: block;
@@ -8,7 +8,50 @@
     .recommend {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        // justify-content: space-between;
         flex-wrap: wrap;
+    }
+
+    .recommendItem {
+        border: 1px solid #eee;
+        padding: 10px;
+        height: 280px;
+        margin-right: 10px;
+
+        &:hover {
+            box-shadow: 2px 2px 5px #ccc;
+            ;
+        }
+
+        .recommendItem_img {
+            width: 200px;
+            margin-bottom: 10px;
+
+            >img {
+                width: 100%;
+            }
+        }
+
+        .recommendItem_span {
+            width: 200px;
+            // max-width: 200px;
+            // overflow: hidden;
+            // white-space: nowrap;
+            // text-overflow: ellipsis;
+
+            :hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+.recommendSong {
+    .title {
+        color: #ccc;
+        display: block;
+        padding: 20px 0;
     }
 }

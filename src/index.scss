@@ -1,6 +1,4 @@
 @import '~antd/dist/antd.css';
-@import '~slick-carousel/slick/slick.css';
-@import '~slick-carousel/slick/slick-theme.css';
 
 body,
 html {
@@ -10,6 +8,7 @@ html {
   font-weight: 400;
   font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
     Microsoft YaHei, '\5FAE\8F6F\96C5\9ED1', Arial, sans-serif;
+
 }
 
 #root {
@@ -1359,6 +1358,7 @@ ol {
     overflow-y: scroll;
     padding: 10px 20px;
 
+
     >div {
       margin: 0 20px;
     }
@@ -1464,6 +1464,7 @@ ol {
 
 #app {
   height: 100%;
+  min-width: 1920px;
 
   .top-container {
     height: 60px;

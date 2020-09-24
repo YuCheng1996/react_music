@@ -17,9 +17,11 @@ export default class Discovery extends Component {
         let { bannerList, recommendList } = this.state
         return (
             <div>
+                {/* 轮播图 */}
                 <Banner bannerList={bannerList} />
-                <div className="recommendBox">
-                    <span className="title">推荐音乐</span>
+                {/* 推荐音乐 */}
+                <div className="recommendSongFrom">
+                    <span className="title">推荐歌单</span>
                     <div className="recommend">
                         {
                             recommendList.map((item, index) => {
@@ -29,6 +31,14 @@ export default class Discovery extends Component {
                                 )
                             })
                         }
+                    </div>
+                </div>
+
+                {/* 推荐歌单 */}
+                <div className="recommendSong">
+                    <span className="title">推荐音乐</span>
+                    <div>
+
                     </div>
                 </div>
             </div>
@@ -46,9 +56,11 @@ export default class Discovery extends Component {
         })
     }
 
-    getRecommendList() {
-        axios.getAction('/personalized').then(res => {
-            console.log(res)
+    // 获取推荐歌单
+    getRecommendSongFromList() {
+        axios.getAction('/personalized', {
+            limit: 7
+        }).then(res => {
             if (res.data.code === 200) {
                 this.setState({
                     recommendList: res.data.result
@@ -57,10 +69,18 @@ export default class Discovery extends Component {
         })
     }
 
+    // 获取推荐音乐
+    getRecommendSongList() {
+        axios.getAction('/personalized/newsong').then(res => {
+            console.log(res)
+        })
+    }
+
 
 
     componentDidMount() {
         this.getBanners()
-        this.getRecommendList()
+        this.getRecommendSongFromList()
+        this.getRecommendSongList()
     }
 }
